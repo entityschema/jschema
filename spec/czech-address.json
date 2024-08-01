@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/entityschema/jschema/main/spec/address.json",
+    "title": "CzechAddress",
+    "description": "Location defination",
+    "type": "object",
+    "properties": {
+      "addressLine1": {
+        "description": "First line of address. Usually street with number.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120
+      },
+      "addressLine2": {
+        "description": "Secand line of address.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120
+      },
+      "city": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120
+      },
+      "postCode": {
+        "type": "string",
+        "pattern": "^[0-9]{5}$"
+      }
+  
+    },
+    "required": [ "addressLine1", "addressLine2", "city", "postCode" ],
+    "examples": [
+        {
+          "addressLine1": "Rohová 14",
+          "city": "Praha 6",
+          "postCode": "16500"
+        }
+    ]
+  }
+  

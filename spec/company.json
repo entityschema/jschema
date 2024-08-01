@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/entityschema/jschema/main/spec/website.json",
+  "title": "Company",
+  "description": "Company is any subject which has own ICO.",
+  "type": "object",
+  "properties": {
+    "ico": {
+      "description": "ICO is unique 8 character length number of company.",
+      "type": "string",
+      "pattern": "^[0-9]{8}$"
+    },
+    "companyName": {
+      "description": "Oficial name of company.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "address": {
+        "$ref": "czech-address.json"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[0-9]{9}$"
+    },
+    "dataBoxId": {
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 12
+    }
+  },
+  "required": ["ico", "companyName", "address"],
+  "examples": [
+    {
+      "ico": "07059663",
+      "companyName": "edut s.r.o.",
+      "phone": "608072647",
+      "address": {
+        "addressLine1": "Rohová 14",
+        "city": "Praha 6",
+        "postCode": "16500"
+      },
+      "dataBoxId": "g6q7zsa"
+    }
+  ]
+}
