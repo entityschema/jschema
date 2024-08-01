@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/entityschema/jschema/main/spec/company.json",
+    "$id": "https://raw.githubusercontent.com/entityschema/jschema/main/spec/website.json",
     "title": "Website",
     "description": "Website is page available on internet with specific URL.",
     "type": "object",

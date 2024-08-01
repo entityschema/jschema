@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/entityschema/jschema/main/spec/website.json",
+  "$id": "https://raw.githubusercontent.com/entityschema/jschema/main/spec/company.json",
   "title": "Company",
   "description": "Company is any subject which has own ICO.",
   "type": "object",
